@@ -1,0 +1,43 @@
+public class StringOperations {
+    public static void main(String[] args) {
+        // 1. Creating strings using literals and the new keyword
+        String literalString = "Hello";
+        String newString = new String("World");
+
+        System.out.println("Literal String: " + literalString);
+        System.out.println("New String: " + newString);
+
+        // 2. Finding the length of a string
+        System.out.println("Length of literalString: " + literalString.length());
+
+        // 3. Converting a string to uppercase and lowercase
+        System.out.println("Uppercase: " + literalString.toUpperCase());
+        System.out.println("Lowercase: " + newString.toLowerCase());
+
+        // 4. Concatenating two strings
+        String combinedString = literalString + " " + newString;
+        System.out.println("Concatenated String: " + combinedString);
+
+        // 5. Comparing two strings using equals() and compareTo()
+        String str1 = "Java";
+        String str2 = "java";
+        System.out.println("str1 equals str2: " + str1.equals(str2));
+        System.out.println("str1 compareTo str2: " + str1.compareTo(str2));
+
+        // 6. Finding a character at a specific index using charAt()
+        System.out.println("Character at index 1 in literalString: " + literalString.charAt(1));
+
+        // 7. Finding the index of a character or substring using indexOf() and lastIndexOf()
+        String sample = "Programming in Java";
+        System.out.println("First index of 'a': " + sample.indexOf('a'));
+        System.out.println("Last index of 'a': " + sample.lastIndexOf('a'));
+        System.out.println("Index of substring 'Java': " + sample.indexOf("Java"));
+
+        // 8. Extracting a substring using substring()
+        System.out.println("Substring from index 5 to 11: " + sample.substring(5, 11));
+
+        // 9. Replacing characters or substrings using replace()
+        String replacedString = sample.replace("Java", "Python");
+        System.out.println("After replacement: " + replacedString);
+    }
+}

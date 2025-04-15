@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input from the user
+        System.out.print("Enter a sentence: ");
+        String input = scanner.nextLine();
+
+        // Original string
+        System.out.println("Original String: " + input);
+
+        // Length
+        System.out.println("Length: " + input.length());
+
+        // Uppercase and Lowercase
+        System.out.println("Uppercase: " + input.toUpperCase());
+        System.out.println("Lowercase: " + input.toLowerCase());
+
+        // Concatenated String
+        String concatenated = input + " Java";
+        System.out.println("Concatenated String: " + concatenated);
+
+        // Character at index 4
+        if (input.length() > 4) {
+            System.out.println("Character at index 4: " + input.charAt(4));
+        } else {
+            System.out.println("Character at index 4: Not available (String too short)");
+        }
+
+        // Index of 'O'
+        int indexO = input.toUpperCase().indexOf('O'); // Make it case-insensitive
+        System.out.println("Index of 'O': " + indexO);
+
+        // Substring from index 6
+        if (input.length() > 6) {
+            System.out.println("Substring from index 6: " + input.substring(6));
+        } else {
+            System.out.println("Substring from index 6: Not available (String too short)");
+        }
+
+        // Replacing "World" with "Java"
+        String replaced = input.replace("World", "Java");
+        System.out.println("Replaced String: " + replaced);
+
+        // Count vowels
+        int vowelCount = 0;
+        for (char ch : input.toLowerCase().toCharArray()) {
+            if ("aeiou".indexOf(ch) != -1) {
+                vowelCount++;
+            }
+        }
+        System.out.println("Number of vowels: " + vowelCount);
+
+        // Count words
+        String[] words = input.trim().split("\\s+");
+        int wordCount = words.length;
+        System.out.println("Number of words: " + wordCount);
+
+        scanner.close();
+    }
+}
